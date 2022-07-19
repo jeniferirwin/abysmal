@@ -9,6 +9,6 @@ export TTPORT="5000"
 # tt++ MUST be invoked in the same directory as
 # bootstrap.tt in order for the system to work.
 
-cd ~/tintin/abysmal
+cd ~/abysmal
 
 tt++ bootstrap.tt
