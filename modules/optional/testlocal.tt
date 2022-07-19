@@ -8,7 +8,7 @@
 #alias {testlocal}
 {
     #class {mods[filenames][testlocal]} {open};
-    #
+    
     #nop {
         Based on my testing, the second set of empty braces MUST be included,
         even if you don't want to initially assign anything to the variable.
