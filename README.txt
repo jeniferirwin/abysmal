@@ -30,7 +30,16 @@ then reads the contents of core.tt.
 
 core.tt is responsible for loading additional .tt files (I call them 'modules'
 or 'mods'). It also creates variables that hold a list of all modules. This is
-also where the very important 'reload' alias is found.
+also where the very important 'reload' and 'killall' aliases are found.
+
+When making changes to scripts, you can 'reload' to quickly apply them. If
+you have a problem or just want to flush the entire system for whatever reason,
+type 'killall'. You can then 'reload' again if you wish.
+
+Note that 'killall' will only flush things that have been properly loaded in as
+modules. If you REALLY want to kill EVERYTHING, use #kill - but this will make
+it so that you can't use 'reload' until you either #read core.tt or restart
+tintin.
 
 == MODULES FOLDER AND THE RELOAD ALIAS ==
 
@@ -63,7 +72,7 @@ modify a file to work with the 'reload' folder if you like.
 
 == THE LOGS FOLDER ==
 
-Raw ASCII logs are automatically placed in here. The logs can be read in
+Raw ANSI logs are automatically placed in here. The logs can be read in
 color with less -R
 
 == THE MODULES ==
@@ -119,8 +128,8 @@ prompt ever made.
 Sends a string of randomized characters to the MUD to interrupt spam, so
 that the MUD doesn't kick you. This is not always desirable; if you happen
 to write a script that malfunctions and goes into an infinite loop of
-spam, the MUD probably won't kick you to stop it. Type #kill to quickly
-stop any haywire scripts.
+spam, the MUD probably won't kick you to stop it. Type killall (or, more
+severely, #kill) to quickly stop any haywire scripts.
 
 = statdiff.tt =
 
